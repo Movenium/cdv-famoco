@@ -1,0 +1,27 @@
+{
+  "name": "cdv-famoco",
+  "version": "1.0.0",
+  "description": "Cordova Plugin for famoco",
+  "cordova": {
+    "id": "cdv-famoco",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://vvsalmin@github.com/Movenium/cdv-famoco.git"
+  },
+  "keywords": [
+    "cordova",
+    "device",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Veikko Salminen",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/Movenium/cdv-famoco/issues"
+  },
+  "homepage": "https://github.com/Movenium/cdv-famoco#readme"
+}
