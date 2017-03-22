@@ -1,29 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="cdv-famoco" version="1.0.0">
-    <name>cdv-famoco</name>
-    <description>Cordova Plugin for famoco</description>
-    <license>Apache 2.0</license>
-    <keywords>cordova,device</keywords>
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.movenium.cdvfamoco"
+        version="1.0.1">
 
-    <platform name="android">
-        <js-module src="www/cdvfamoco.js" name="FAMOCO">
-            <runs />
-        </js-module>
+  <name>cdv-famoco</name>
 
-        <config-file target="res/xml/config.xml" parent="/widget">
-            <feature name="getImei">
-                <param name="android-package" value="com.movenium.cdvfamoco.getImei"/>
-            </feature>
-        </config-file>
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
 
-        <source-file src="src/android/cdvfamoco.java"
-                     target-dir="src/com/movenium/cdvfamoco"/>
+  <asset src="www/cdvfamoco.js" target="js/cdvfamoco.js"/>
 
+  <js-module src="www/cdvfamoco.js" name="cdvfamoco">
+    <clobbers target="cdvfamoco" />
+  </js-module>
 
-        <config-file target="AndroidManifest.xml" parent="/manifest">
-            <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-        </config-file>
+  <platform name="android">
 
-    </platform>
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="famoco">
+        <param name="android-package" value="com.movenium.plugin.famoco"/>
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/famoco.java" target-dir="src/com/movenium/plugin/"/>
+  </platform>
+
 </plugin>

@@ -1,7 +1,7 @@
+/*global cordova, module*/
 
-
-window.getImei = function(str, callback) {
-    cordova.exec(callback, function(err) {
-        callback('Fetching imei failed.');
-    }, "Famoco", "getImei", [str]);
+module.exports = {
+    getImei: function (name, successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "famoco", "getImei", [name]);
+    }
 };
