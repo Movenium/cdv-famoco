@@ -1,8 +1,12 @@
 package com.movenium.plugin;
 
+import android.telephony.TelephonyManager;
+
 import org.apache.cordova.*;
 import org.json.JSONArray;
 import org.json.JSONException;
+
+import static android.content.Context.TELEPHONY_SERVICE;
 
 public class famoco extends CordovaPlugin {
 
@@ -11,9 +15,10 @@ public class famoco extends CordovaPlugin {
 
         if (action.equals("getImei")) {
 
-            String name = data.getString(0);
-            String message = "Hello, " + name;
-            callbackContext.success(message);
+            TelephonyManager mngr = (TelephonyManager) this.cordova.getActivity().getSystemService(TELEPHONY_SERVICE);
+            String imei = mngr.getDeviceId();
+
+            callbackContext.success(imei);
 
             return true;
 

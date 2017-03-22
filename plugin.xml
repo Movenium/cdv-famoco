@@ -24,6 +24,10 @@
     </config-file>
 
     <source-file src="src/android/famoco.java" target-dir="src/com/movenium/plugin/"/>
+
+    <config-file target="AndroidManifest.xml" parent="/manifest">
+      <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    </config-file>
   </platform>
 
 </plugin>
