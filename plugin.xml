@@ -12,7 +12,7 @@
   <asset src="www/cdvfamoco.js" target="js/cdvfamoco.js"/>
 
   <js-module src="www/cdvfamoco.js" name="cdvfamoco">
-    <clobbers target="cdvfamoco" />
+    <clobbers target="famoco" />
   </js-module>
 
   <platform name="android">
