@@ -1,6 +1,6 @@
 {
   "name": "cdv-famoco",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "plugin for getting information from famoco device",
   "cordova": {
     "id": "com.movenium.cdvfamoco",
